@@ -1,0 +1,377 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "open-library-search-api-validation;validate-search-api-for-a-valid-term",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Validate search API for a valid term",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 766479499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 4,
+            "name": "I call search API with \"The Hobbit\"",
+            "match": {
+              "location": "tests\\steps\\apiSteps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1890277999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 5,
+            "name": "the response status should be 200",
+            "match": {
+              "location": "tests\\steps\\apiSteps.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 345200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "the response should be valid JSON",
+            "match": {
+              "location": "tests\\steps\\apiSteps.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 365600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "numFound should be greater than 0",
+            "match": {
+              "location": "tests\\steps\\apiSteps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 271999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "docs should be a non-empty array",
+            "match": {
+              "location": "tests\\steps\\apiSteps.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 297900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "the first 5 docs should have valid title and author",
+            "match": {
+              "location": "tests\\steps\\apiSteps.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 406199
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 213537999
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "open-library-search-api-validation;validate-search-api-with-invalid-term",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "Validate search API with invalid term",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 333610800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "I call search API with \"asdkjfhaskjdhfkasjdhf\"",
+            "match": {
+              "location": "tests\\steps\\apiSteps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 327580799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "the response status should be 200",
+            "match": {
+              "location": "tests\\steps\\apiSteps.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 204199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "numFound should be zero or more",
+            "match": {
+              "location": "tests\\steps\\apiSteps.js:47"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 322999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "docs should be empty or valid",
+            "match": {
+              "location": "tests\\steps\\apiSteps.js:52"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 274099
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 272573800
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "open-library-search-api-validation",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Open Library Search API Validation",
+    "tags": [],
+    "uri": "src\\features\\api.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "api-to-ui-consistency-validation;verify-api-result-title-is-present-in-ui-results",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Verify API result title is present in UI results",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 371445799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I fetch the first book title from search API using \"The Hobbit\"",
+            "match": {
+              "location": "tests\\steps\\integerationSteps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1121234599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I search for \"The Hobbit\" in UI",
+            "match": {
+              "location": "tests\\steps\\integerationSteps.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7644004600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "I should see the API title in the UI results",
+            "match": {
+              "location": "tests\\steps\\integerationSteps.js:40"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5828199
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 257881999
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "api-to-ui-consistency-validation",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "API to UI Consistency Validation",
+    "tags": [],
+    "uri": "src\\features\\integeration.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "open-library-ui-search-validation;validate-search-results-for-a-fixed-term",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Validate search results for a fixed term",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 342249899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I navigate to Open Library homepage",
+            "match": {
+              "location": "tests\\steps\\uiSteps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2733405400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I search for \"The Hobbit\"",
+            "match": {
+              "location": "tests\\steps\\uiSteps.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3817067299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "I should see a list of search results",
+            "match": {
+              "location": "tests\\steps\\uiSteps.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9378000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "at least 5 results should be visible",
+            "match": {
+              "location": "tests\\steps\\uiSteps.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1533800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "the first 5 results should have valid title and author",
+            "match": {
+              "location": "tests\\steps\\uiSteps.js:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 25314500
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 212554799
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "open-library-ui-search-validation",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Open Library UI Search Validation",
+    "tags": [],
+    "uri": "src\\features\\ui.feature"
+  }
+]
