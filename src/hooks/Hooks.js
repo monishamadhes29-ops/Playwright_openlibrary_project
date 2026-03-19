@@ -10,7 +10,7 @@ Before(async function (scenario) {
   try {
     Logger.info(`Starting Scenario: ${scenario.pickle.name}`);
     this.browser = await chromium.launch({
-       headless: process.env.CI ? true : false 
+       headless: process.env.CI ? true : false, 
       slowMo: 100   // optional for visibility
     });
 
